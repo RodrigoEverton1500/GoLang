@@ -2,13 +2,10 @@ package main
 import "fmt"
 
 func main() {
-    var diaria, salario float32
+    var preco float32
     
-    fmt.Printf("Digite dias trabalhados: ")
-    fmt.Scan(&diaria)
+    fmt.Printf("Digite preço do produto: ")
+    fmt.Scan(&preco)
     
-    fmt.Printf("Digite valor da diária: ")
-    fmt.Scan(&salario)
-    
-    fmt.Printf("Salário: %.2f", salario*diaria)
+    fmt.Printf("Preço com desconto de 10%%: R$%.2f", preco*0.9)
 }
