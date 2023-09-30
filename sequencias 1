@@ -13,4 +13,3 @@ func main() {
     
     fmt.Printf("\nSoma dos valores: %d", soma)
 }
-
