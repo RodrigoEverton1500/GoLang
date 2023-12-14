@@ -1,13 +1,12 @@
 package main
-import ("fmt"
-"errors")
+import "fmt"
 
-func f(slice[]int, func()) (erro error) {
-    n, c := 0
-    s := [] int {}
-    s
+func f() {
+    n := 0
+    c := 0
+    s := [100] int {}
     
-    for {
+    for i := 0; i < 100; i++ {
         fmt.Scan(&n)
         if n == 0 {
             break
@@ -18,6 +17,16 @@ func f(slice[]int, func()) (erro error) {
     }
     
     for i := 0; i < c; i++ {
-        
+        n := s[i]
+        fmt.Println(parametro(n))
     }
+}
+
+func parametro(n int) int {
+    n *= 5
+    return n
+}
+
+func main() {
+    f()
 }
