@@ -33,6 +33,9 @@ func modificar(class Aluno) {
     var op int
     
     fmt.Printf("1- Adicionar\n2- Remover \n")
+    fmt.Print("Operação: ")
+    fmt.Scan(&op)
+    
     switch op {
     case 1:
         fmt.Print("Nota: ")
@@ -43,6 +46,8 @@ func modificar(class Aluno) {
         fmt.Scan(&n)
         class.notas = append(class.notas[:n-1], class.notas[n:]...)
     }
+    
+    menu(class)
 }
 
 func media(class Aluno) {
@@ -55,10 +60,12 @@ func media(class Aluno) {
     media /= float32(l)
     
     fmt.Printf("Média: %.2f\n", media)
+    menu(class)
 }
 
 func imprimir(class Aluno) {
     fmt.Println(class)
+    menu(class)
 }
 
 func main() {
@@ -80,7 +87,5 @@ func main() {
     }
     a.notas = s
     
-    for {
-        menu(a)
-    }
+    menu(a)
 }
