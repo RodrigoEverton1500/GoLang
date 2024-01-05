@@ -3,18 +3,18 @@ import (
     "fmt"
     )
 
-func main() {
-    var p *int
-    var n int = 10
-    var soma int
-    p = &n
-    
-    fmt.Println(*p, n)
-    
-    for i := 0; i <= n; i++ {
-        soma += i
+func ponteiro(n *int) {
+    l := *n
+    *n = 0
+    for i := 1; i <= l; i++ {
+        *n += i
     }
-    n = soma
+}
+
+func main() {
+    var n int = 5
     
-    fmt.Println(*p, n)
+    fmt.Println(n)
+    ponteiro(&n)
+    fmt.Println(n)
 }
